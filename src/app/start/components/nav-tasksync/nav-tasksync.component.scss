@@ -1,0 +1,50 @@
+/* filepath: c:\Users\RICK\Desktop\Nueva carpeta (2)\TaskSync-\src\app\start\components\nav-tasksync\nav-tasksync.component.scss */
+.navbar {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los elementos dentro del nav */
+  align-items: center; /* Centra verticalmente los elementos dentro del nav */
+background-color: black;
+  padding: 1rem; 
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+
+    li {
+      text-transform: uppercase;
+
+      a {
+        text-decoration: none;
+        color: #fdfdfd;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #92989f;
+        }
+      }
+    }
+  }
+
+  app-login {
+    position: absolute; 
+    right: 1rem; 
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    app-login {
+      position: static; /* Restablece la posición del botón en pantallas pequeñas */
+      margin-top: 1rem;
+    }
+  }
+}

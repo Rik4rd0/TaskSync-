@@ -1,0 +1,54 @@
+.button-container {
+  position: fixed;
+  top: 110%; // Posición inicial del botón (80% de la altura de la ventana)
+  left: 50%; // Centrado horizontalmente
+  transform: translate(-50%, -50%); // Ajuste para centrar completamente
+}
+
+.start-button {
+  background-color: #aeb4bb; 
+  color: white; 
+  border: none;
+  border-radius: 50px; // Bordes redondeados
+  padding: 15px 30px; // Tamaño del botón
+  font-size: 1.5rem; // Tamaño del texto
+  font-weight: bold;
+  cursor: pointer;
+  display: flex; // Para alinear el ícono y el texto
+  align-items: center; // Centra verticalmente el contenido
+  gap: 10px; // Espacio entre el ícono y el texto
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); // Sombra para darle un efecto elevado
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: #45515ec9; // Color al pasar el mouse
+    transform: scale(1.05); // Efecto de agrandamiento al pasar el mouse
+  }
+
+  &:active {
+    transform: scale(0.95); // Efecto al hacer clic
+  }
+}
+
+// Media queries para dispositivos más pequeños
+@media (max-width: 768px) {
+  .button-container {
+    top: 85%; // Baja el botón un poco más en tablets
+  }
+
+  .start-button {
+    padding: 12px 24px; // Reduce el tamaño del botón
+    font-size: 1.2rem; // Reduce el tamaño del texto
+  }
+}
+
+@media (max-width: 480px) {
+  .button-container {
+    top: 90%; // Baja el botón aún más en móviles
+  }
+
+  .start-button {
+    padding: 10px 20px; // Reduce aún más el tamaño del botón
+    font-size: 1rem; // Ajusta el tamaño del texto
+  }
+}

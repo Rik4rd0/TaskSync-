@@ -1,19 +1,16 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { RouterOutlet } from '@angular/router';
+import { StartComponent } from './start/start.component';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [StartComponent, RouterModule, RouterLinkActive, RouterLink],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // Corregido de styleUrl a styleUrls
+  styleUrls: ['./app.component.scss'] 
 })
 export class AppComponent {
-  title = 'Tasksync-';
-
-  constructor(private router: Router) {} // Movido dentro de la clase correctamente
-
-  navigateToDashboard() {
-    this.router.navigate(['/dashboard']); // Corregido de navegate a navigate
-  }
+  
+   
 }
